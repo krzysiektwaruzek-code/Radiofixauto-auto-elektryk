@@ -3,40 +3,98 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Radiofixauto – auto elektryk | Lokalizacja i kontakt</title>
-  <meta name="description" content="Radiofixauto – auto elektryk. Sprawdź lokalizację na mapie, wyznacz trasę i skontaktuj się z nami.">
+  <title>Auto elektryk Radiofixauto – kontakt i dojazd</title>
+  <meta name="description" content="Radiofixauto – auto elektryk. Zobacz lokalizację na mapie, wyznacz trasę, sprawdź objawy usterek instalacji elektrycznej w aucie i napisz do nas.">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
   <meta name="theme-color" content="#0a0d12">
   <link rel="canonical" href="https://TWOJA-DOMENA.pl/">
+  <link rel="alternate" hreflang="pl" href="https://TWOJA-DOMENA.pl/">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
 
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pl_PL">
   <meta property="og:site_name" content="Radiofixauto – auto elektryk">
-  <meta property="og:title" content="Radiofixauto – auto elektryk">
-  <meta property="og:description" content="Sprawdź lokalizację na mapie, wyznacz trasę i skontaktuj się z nami.">
+  <meta property="og:title" content="Auto elektryk Radiofixauto – kontakt i dojazd">
+  <meta property="og:description" content="Zobacz lokalizację na mapie, wyznacz trasę i napisz do nas.">
   <meta property="og:url" content="https://TWOJA-DOMENA.pl/">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Radiofixauto – auto elektryk">
-  <meta name="twitter:description" content="Sprawdź lokalizację na mapie, wyznacz trasę i skontaktuj się z nami.">
-  <!-- TODO: og:image / twitter:image – dodać po otrzymaniu prawdziwego logo lub zdjęcia firmy -->
+  <meta property="og:image" content="https://TWOJA-DOMENA.pl/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Radiofixauto – auto elektryk">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Auto elektryk Radiofixauto – kontakt i dojazd">
+  <meta name="twitter:description" content="Zobacz lokalizację na mapie, wyznacz trasę i napisz do nas.">
+  <meta name="twitter:image" content="https://TWOJA-DOMENA.pl/assets/img/og-image.png">
+  <!-- og-image.png to grafika wyłącznie typograficzna (nazwa firmy). Zamień na prawdziwe logo/zdjęcie, gdy klient je dostarczy. -->
 
   <link rel="stylesheet" href="assets/css/style.css">
 
   <!--
-    Schema.org: wyłącznie potwierdzone dane (nazwa i współrzędne z wizytówki Google Maps).
-    TODO po otrzymaniu od klienta: "address", "telephone", "openingHoursSpecification", "url", "image", "sameAs".
+    Schema.org: wyłącznie potwierdzone dane (nazwa i współrzędne z wizytówki Google Maps) oraz treści widoczne na stronie.
+    TODO po otrzymaniu od klienta: "address", "telephone", "openingHoursSpecification", "image", "sameAs".
   -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "AutoRepair",
-    "name": "Radiofixauto auto elektryk",
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 51.9552285,
-      "longitude": 19.2790293
-    },
-    "hasMap": "https://www.google.com/maps/place/Radiofixauto+auto+elektryk/@51.9552285,19.2790293,17z/data=!3m1!4b1!4m6!3m5!1s0x471bb187d4288155:0x265729874200ca62!8m2!3d51.9552285!4d19.2790293!16s%2Fg%2F11zy30gttb"
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://TWOJA-DOMENA.pl/#website",
+        "url": "https://TWOJA-DOMENA.pl/",
+        "name": "Radiofixauto – auto elektryk",
+        "inLanguage": "pl-PL",
+        "publisher": { "@id": "https://TWOJA-DOMENA.pl/#business" }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://TWOJA-DOMENA.pl/#webpage",
+        "url": "https://TWOJA-DOMENA.pl/",
+        "name": "Auto elektryk Radiofixauto – kontakt i dojazd",
+        "isPartOf": { "@id": "https://TWOJA-DOMENA.pl/#website" },
+        "about": { "@id": "https://TWOJA-DOMENA.pl/#business" },
+        "inLanguage": "pl-PL"
+      },
+      {
+        "@type": "AutoRepair",
+        "@id": "https://TWOJA-DOMENA.pl/#business",
+        "name": "Radiofixauto auto elektryk",
+        "url": "https://TWOJA-DOMENA.pl/",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 51.9552285,
+          "longitude": 19.2790293
+        },
+        "hasMap": "https://www.google.com/maps/place/Radiofixauto+auto+elektryk/@51.9552285,19.2790293,17z/data=!3m1!4b1!4m6!3m5!1s0x471bb187d4288155:0x265729874200ca62!8m2!3d51.9552285!4d19.2790293!16s%2Fg%2F11zy30gttb"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://TWOJA-DOMENA.pl/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Gdzie znajduje się Radiofixauto?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Dokładną lokalizację widać na mapie w sekcji „Kontakt i dojazd”. Przyciskiem „Wyznacz trasę” otworzysz nawigację w Google Maps." }
+          },
+          {
+            "@type": "Question",
+            "name": "Jak mogę się skontaktować?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Skorzystaj z formularza kontaktowego w sekcji „Kontakt i dojazd”. Opisz w nim problem z pojazdem i podaj telefon lub e-mail do odpowiedzi." }
+          },
+          {
+            "@type": "Question",
+            "name": "Jakie informacje podać w wiadomości?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Marka, model i rocznik pojazdu, opis objawów, informacja kiedy się pojawiają (np. przy rozruchu, w czasie jazdy, po postoju) oraz czy świecą się kontrolki na desce rozdzielczej." }
+          },
+          {
+            "@type": "Question",
+            "name": "Czy mogę zobaczyć firmę w Google Maps?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Tak. W sekcji „Kontakt i dojazd” znajdziesz przycisk „Otwórz w Google Maps”, który prowadzi do wizytówki firmy." }
+          }
+        ]
+      }
+    ]
   }
   </script>
 </head>
@@ -59,7 +117,9 @@
           <li><a href="#start">Start</a></li>
           <!-- TODO: odkomentować po uzupełnieniu sekcji i zdjęciu atrybutu hidden z <section id="uslugi">
           <li><a href="#uslugi">Usługi</a></li> -->
+          <li><a href="#objawy">Objawy usterek</a></li>
           <li><a href="#kontakt">Kontakt i dojazd</a></li>
+          <li><a href="#faq">FAQ</a></li>
         </ul>
         <a class="btn btn-primary btn-sm nav-cta" href="https://www.google.com/maps/dir/?api=1&amp;destination=51.9552285,19.2790293" target="_blank" rel="noopener">Wyznacz trasę</a>
       </nav>
@@ -129,6 +189,74 @@
       </div>
     </section>
 
+    <!-- OBJAWY – materiał informacyjny dla kierowców (nie jest opisem oferty firmy) -->
+    <section class="section" id="objawy" aria-labelledby="objawy-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Dla kierowców</p>
+          <h2 id="objawy-title">Kiedy sprawdzić instalację elektryczną w samochodzie</h2>
+          <p class="section-lead">Poniższe objawy mogą wskazywać na usterkę w układzie elektrycznym pojazdu. To ogólne wskazówki, a nie diagnoza konkretnego auta.</p>
+        </header>
+
+        <ul class="cards">
+          <li class="card reveal">
+            <svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v8M6.3 6.5a8 8 0 1 0 11.4 0"/></svg>
+            <h3>Problemy z rozruchem</h3>
+            <p>Słaby rozrusznik, kliknięcia zamiast uruchomienia silnika albo konieczność kilkukrotnego próbowania. Przyczyną może być akumulator, połączenia elektryczne lub rozrusznik.</p>
+          </li>
+          <li class="card reveal">
+            <svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="7" width="17" height="10" rx="2"/><path d="M22 10.5v3M7 12h5M9.5 9.5v5"/></svg>
+            <h3>Rozładowujący się akumulator</h3>
+            <p>Auto nie odpala po nocy lub kilku dniach postoju. Może to oznaczać pobór prądu przy wyłączonym zapłonie albo problem z ładowaniem w czasie jazdy.</p>
+          </li>
+          <li class="card reveal">
+            <svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 2.5 20h19z"/><path d="M12 10v5M12 17.6v.4"/></svg>
+            <h3>Świecące kontrolki</h3>
+            <p>Kontrolka ładowania akumulatora lub inne kontrolki na desce rozdzielczej to sygnał, którego nie warto ignorować – szczególnie gdy pojawiają się w trakcie jazdy.</p>
+          </li>
+          <li class="card reveal">
+            <svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg>
+            <h3>Przepalające się żarówki i bezpieczniki</h3>
+            <p>Częste przepalanie wskazuje na usterkę w obwodzie. Nie należy zastępować bezpiecznika mocniejszym – może to doprowadzić do przegrzania instalacji.</p>
+          </li>
+          <li class="card reveal">
+            <svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 2v5M15 2v5M6 7h12v4a6 6 0 0 1-12 0zM12 17v5"/></svg>
+            <h3>Niedziałające odbiorniki</h3>
+            <p>Szyby, centralny zamek, nawiew, radio czy światła, które przestają działać lub działają sporadycznie. Powodem bywają styki, przekaźniki albo uszkodzona wiązka.</p>
+          </li>
+          <li class="card reveal">
+            <svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22c4 0 7-2.8 7-6.5 0-3-2-5-3.5-7-.5 2-1.5 3-3 3 0-3-1-6-3-8.500C8.500 6 5 9.500 5 15.500 5 19.200 8 22 12 22z"/></svg>
+            <h3>Zapach spalenizny lub dym</h3>
+            <p>To sytuacja awaryjna: zatrzymaj się w bezpiecznym miejscu, wyłącz zapłon i nie kontynuuj jazdy, dopóki przyczyna nie zostanie sprawdzona.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- JAK SIĘ SKONTAKTOWAĆ -->
+    <section class="section section-alt" id="kroki" aria-labelledby="kroki-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Kontakt krok po kroku</p>
+          <h2 id="kroki-title">Jak się z nami skontaktować</h2>
+        </header>
+        <ol class="steps">
+          <li class="step reveal">
+            <h3>Opisz problem</h3>
+            <p>Podaj markę, model i rocznik pojazdu oraz objawy: kiedy się pojawiają i czy świecą się kontrolki.</p>
+          </li>
+          <li class="step reveal">
+            <h3>Napisz do nas</h3>
+            <p>Wyślij wiadomość przez <a href="#formularz">formularz kontaktowy</a> i zostaw telefon lub e-mail do odpowiedzi.</p>
+          </li>
+          <li class="step reveal">
+            <h3>Sprawdź dojazd</h3>
+            <p>Zobacz lokalizację na mapie i wyznacz trasę w Google Maps jednym kliknięciem.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
     <!-- KONTAKT -->
     <section class="section" id="kontakt" aria-labelledby="kontakt-title">
       <div class="container">
@@ -168,7 +296,7 @@
             </figure>
           </div>
 
-          <div class="panel form-panel reveal">
+          <div class="panel form-panel reveal" id="formularz">
             <h3 class="panel-title">Formularz kontaktowy</h3>
             <!-- Integracja: wpisz adres usługi odbierającej formularz w data-endpoint (np. Formspree, własny skrypt PHP na Hostingerze). -->
             <form id="contact-form" data-endpoint="" novalidate>
@@ -207,6 +335,33 @@
         </div>
       </div>
     </section>
+    <!-- FAQ (treść zgodna z FAQPage w JSON-LD – zmieniając jedno, zmień drugie) -->
+    <section class="section section-alt" id="faq" aria-labelledby="faq-title">
+      <div class="container narrow">
+        <header class="section-head reveal">
+          <p class="eyebrow">FAQ</p>
+          <h2 id="faq-title">Najczęstsze pytania</h2>
+        </header>
+        <div class="faq reveal">
+          <details>
+            <summary>Gdzie znajduje się Radiofixauto?</summary>
+            <p>Dokładną lokalizację widać na mapie w sekcji <a href="#kontakt">Kontakt i dojazd</a>. Przyciskiem „Wyznacz trasę” otworzysz nawigację w Google Maps.</p>
+          </details>
+          <details>
+            <summary>Jak mogę się skontaktować?</summary>
+            <p>Skorzystaj z <a href="#formularz">formularza kontaktowego</a>. Opisz w nim problem z pojazdem i podaj telefon lub e-mail do odpowiedzi.</p>
+          </details>
+          <details>
+            <summary>Jakie informacje podać w wiadomości?</summary>
+            <p>Marka, model i rocznik pojazdu, opis objawów, informacja kiedy się pojawiają (np. przy rozruchu, w czasie jazdy, po postoju) oraz czy świecą się kontrolki na desce rozdzielczej.</p>
+          </details>
+          <details>
+            <summary>Czy mogę zobaczyć firmę w Google Maps?</summary>
+            <p>Tak. W sekcji <a href="#kontakt">Kontakt i dojazd</a> znajdziesz przycisk „Otwórz w Google Maps”, który prowadzi do wizytówki firmy.</p>
+          </details>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
@@ -214,7 +369,9 @@
       <p class="footer-brand"><strong>Radiofixauto</strong> <span>auto elektryk</span></p>
       <ul class="footer-links">
         <li><a href="#start">Start</a></li>
+        <li><a href="#objawy">Objawy usterek</a></li>
         <li><a href="#kontakt">Kontakt i dojazd</a></li>
+        <li><a href="#faq">FAQ</a></li>
         <li><a href="https://www.google.com/maps/dir/?api=1&amp;destination=51.9552285,19.2790293" target="_blank" rel="noopener">Wyznacz trasę</a></li>
       </ul>
       <p class="copy">© <span id="year">2026</span> Radiofixauto auto elektryk</p>
