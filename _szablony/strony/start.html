@@ -1,0 +1,121 @@
+<section class="hero" aria-labelledby="h1">
+  <div class="hero__bg" aria-hidden="true">
+    <svg class="dial" viewBox="0 0 600 600" fill="none">
+      <circle cx="300" cy="300" r="290"/><circle cx="300" cy="300" r="230"/><circle cx="300" cy="300" r="170"/><circle cx="300" cy="300" r="110"/>
+      <g class="dial__ticks"></g>
+    </svg>
+  </div>
+  <div class="wrap hero__in">
+    <div class="hero__tekst">
+      <p class="eyebrow reveal">{{BRANZA}}</p>
+      <h1 id="h1" class="reveal">{{NAZWA}} <em>{{BRANZA}}</em></h1>
+      <p class="lead reveal">{{LEAD}}</p>
+      <div class="hero__cta reveal">
+        {{CTA}}
+        <a class="btn btn--ghost" href="/kontakt/#formularz-sekcja">Napisz do nas</a>
+      </div>
+      {{STATUS}}
+    </div>
+    <div class="hero__art reveal" aria-hidden="true">
+      <svg viewBox="0 0 480 440" fill="none" focusable="false">
+        <g class="obwod" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M0 70h130l40 40h120l30-30h160"/>
+          <path d="M0 150h100l30 30h70v60l30 30h250"/>
+          <path d="M0 250h70l40 40h70"/>
+          <path d="M0 350h150l30 30h300"/>
+          <path d="M310 0v60l30 30h140"/>
+          <path d="M400 440v-80l-30-30h-80"/>
+        </g>
+        <path class="impuls" d="M0 70h130l40 40h120l30-30h160" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <g class="wezly" stroke="currentColor" stroke-width="1.5">
+          <circle cx="130" cy="70" r="5"/><circle cx="300" cy="110" r="5"/><circle cx="100" cy="150" r="5"/>
+          <circle cx="260" cy="240" r="5"/><circle cx="110" cy="290" r="5"/><circle cx="180" cy="350" r="5"/>
+          <circle cx="340" cy="90" r="5"/><circle cx="370" cy="330" r="5"/>
+        </g>
+        <path class="piorun" d="M262 130 214 222h40l-14 72 56-98h-42z"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="pasek" aria-label="Najważniejsze informacje">
+  <ul class="wrap pasek__lista">
+    {{PASEK}}
+  </ul>
+</section>
+
+<section class="sekcja" aria-labelledby="h-uslugi">
+  <div class="wrap">
+    <header class="sekcja__glowa reveal">
+      <p class="eyebrow">Oferta</p>
+      <h2 id="h-uslugi">Czym się zajmujemy</h2>
+      <p class="sekcja__opis">{{BRANZA}}. Szczegółowa lista usług pojawi się wkrótce.</p>
+    </header>
+    <div class="uslugi">
+      <a class="usluga reveal" href="/oferta/">
+        <span class="usluga__ikona" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></span>
+        <h3>{{BRANZA}}</h3>
+        <p><span class="todo">Opis do uzupełnienia</span></p>
+        <span class="usluga__link">Zobacz ofertę →</span>
+      </a>
+      <a class="usluga reveal" href="/oferta/">
+        <span class="usluga__ikona" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 3v3m0 12v3M3 12h3m12 0h3M5.6 5.6l2.1 2.1m8.6 8.6 2.1 2.1m0-12.8-2.1 2.1M7.7 16.3l-2.1 2.1"/></svg></span>
+        <h3><span class="todo">Usługa do uzupełnienia</span></h3>
+        <p><span class="todo">Opis do uzupełnienia</span></p>
+        <span class="usluga__link">Zobacz ofertę →</span>
+      </a>
+      <a class="usluga reveal" href="/oferta/">
+        <span class="usluga__ikona" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="14" rx="3"/><path d="M8 10h8M8 14h5"/></svg></span>
+        <h3><span class="todo">Usługa do uzupełnienia</span></h3>
+        <p><span class="todo">Opis do uzupełnienia</span></p>
+        <span class="usluga__link">Zobacz ofertę →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="sekcja sekcja--alt" aria-labelledby="h-wiedza">
+  <div class="wrap">
+    <header class="sekcja__glowa sekcja__glowa--rzad reveal">
+      <div>
+        <p class="eyebrow">Dla kierowców</p>
+        <h2 id="h-wiedza">Objawy usterek w instalacji elektrycznej</h2>
+        <p class="sekcja__opis">Ogólne wskazówki dla kierowców. To nie jest diagnoza konkretnego auta.</p>
+      </div>
+      <a class="btn btn--ghost" href="/wiedza/">Wszystkie poradniki</a>
+    </header>
+    <div class="uslugi">
+      {{ARTYKULY_PODGLAD}}
+    </div>
+  </div>
+</section>
+
+{{SEKCJA_REALIZACJE}}
+
+<section class="sekcja" aria-labelledby="h-dojazd">
+  <div class="wrap kontakt">
+    <div class="reveal">
+      <p class="eyebrow">Dojazd</p>
+      <h2 id="h-dojazd">Znajdź nas na mapie</h2>
+      <p class="sekcja__opis">Sprawdź dokładną lokalizację i wyznacz trasę z miejsca, w którym jesteś.</p>
+      <div class="hero__cta">
+        <a class="btn" href="{{TRASA}}" target="_blank" rel="noopener">Wyznacz trasę</a>
+        <a class="btn btn--ghost" href="{{MAPY_URL}}" target="_blank" rel="noopener">Otwórz w Mapach Google</a>
+      </div>
+    </div>
+    <div class="kontakt__mapa reveal">
+      <iframe title="Mapa: {{NAZWA_PELNA}}" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        src="https://maps.google.com/maps?q={{LAT}},{{LNG}}&amp;z=17&amp;hl=pl&amp;output=embed"></iframe>
+    </div>
+  </div>
+</section>
+
+<section class="cta" aria-labelledby="h-cta">
+  <div class="wrap cta__in reveal">
+    <div>
+      <h2 id="h-cta">Masz problem z elektryką w aucie?</h2>
+      <p>{{CTA_OPIS}}</p>
+    </div>
+    {{CTA_LG}}
+  </div>
+</section>

@@ -1,59 +1,54 @@
-# Radiofixauto – auto elektryk
+# Radiofixauto – auto elektryk – strona www
 
-Statyczna strona-wizytówka (HTML / CSS / JS, bez budowania i bez zależności) przygotowana pod hosting na Hostingerze.
+Statyczna strona (HTML + CSS + JS, bez frameworka), w tym samym układzie i stylu co projekt `serwis-milejowiec`.
+**Wszystkie dane firmy są w `dane.json`.** Po każdej zmianie danych, szablonów, CSS lub JS:
 
-## Zasada: tylko potwierdzone dane
+```
+python _narzedzia/buduj.py
+```
 
-Na stronie znajdują się wyłącznie informacje potwierdzone w podanej wizytówce Google Maps:
-nazwa **Radiofixauto auto elektryk** i współrzędne **51.9552285, 19.2790293**.
-Adres, telefon, godziny, usługi, opinie, zdjęcia i logo **nie zostały wymyślone** – miejsca na nie są przygotowane (patrz niżej).
+Skrypt generuje `index.html`, `oferta/`, `wiedza/`, `realizacje/`, `kontakt/`, `404.html`, `sitemap.xml` i `robots.txt`
+(nie edytuj ich ręcznie) i odświeża `?v=` przy CSS/JS. Lokalny podgląd: `python -m http.server` w katalogu repo
+(ścieżki w HTML są absolutne, więc plików nie otwieraj przez `file://`).
 
 ## Struktura
 
 ```
-index.html            strona główna (hero, objawy usterek, kroki kontaktu, kontakt/mapa/formularz, FAQ)
-404.html              strona błędu 404
-assets/css/style.css  style (tokeny kolorów w :root)
-assets/js/main.js     menu mobilne, reveal on scroll, walidacja formularza
-assets/img/           favicon, apple-touch-icon i og-image.png (grafiki typograficzne – to NIE jest logo firmy)
-robots.txt, sitemap.xml, manifest.webmanifest, .htaccess
-scripts/set-domain.sh podmiana domeny po wdrożeniu
-scripts/check.sh      kontrola przed wdrożeniem (czy nie zostały placeholdery)
+dane.json                 dane firmy, FAQ, artykuły, lista podstron
+_szablony/uklad.html      wspólna rama (head, menu, stopka, lightbox)
+_szablony/strony/*.html   treść podstron (start, oferta, wiedza, realizacje, kontakt)
+_szablony/404.html        treść strony błędu
+_narzedzia/buduj.py       składa stronę, sitemap i robots (znaczniki {{NAZWA}} dopisuj w pola())
+_zrodla/ZRODLA.md         skąd pochodzi każda dana (wewnętrzne, .htaccess blokuje publikację)
+assets/css, js, fonts     style, skrypty i lokalne fonty (Barlow Condensed, Inter, licencja OFL)
 ```
+
+## Zasada: tylko potwierdzone dane
+
+Potwierdzone są wyłącznie: nazwa **Radiofixauto auto elektryk**, współrzędne **51.9552285, 19.2790293**
+i wizytówka w Mapach Google (identyfikator wyliczony z podanego linku). Reszta (telefon, adres, godziny, e-mail,
+usługi, ceny, zdjęcia) nie została wymyślona i jest oznaczona na stronie jako „do uzupełnienia".
+Treści w „Wiedza" to ogólne poradniki dla kierowców, a nie opis oferty firmy.
 
 ## Co uzupełnić po otrzymaniu danych od klienta
 
 | Dane | Gdzie |
 |---|---|
-| Domena | `./scripts/set-domain.sh https://twoja-domena.pl` (canonical, OG, robots, sitemap) |
-| Adres, telefon, e-mail, godziny | `index.html` → sekcja `#kontakt`, wiersze z `data-todo` (usuń `hidden`) |
-| Przycisk „Zadzwoń" | zakomentowany w hero (`index.html`) |
-| Usługi | sekcja `#uslugi` (`hidden`) + link w nawigacji (zakomentowany) |
-| Schema.org | blok JSON-LD w `<head>`: `address`, `telephone`, `openingHoursSpecification`, `url`, `image` |
-| Logo / zdjęcia / og:image | `assets/img/`, tag `og:image` w `<head>` |
-| Formularz | atrybut `data-endpoint` w `<form id="contact-form">` (np. Formspree lub własny skrypt PHP). Bez niego formularz uczciwie informuje, że nie jest aktywny |
-| Zgoda RODO / polityka prywatności | treść checkboxa w formularzu – do zatwierdzenia przez klienta |
+| Telefon, e-mail, adres, kod, miejscowość | `dane.json` → `firma`. Znikają znaczniki „do uzupełnienia", przyciski „Wyznacz trasę" zamieniają się w „Zadzwoń", uzupełnia się JSON-LD |
+| Godziny otwarcia | `dane.json` → `firma.godziny`, np. `{"dni": "Poniedziałek – sobota", "od": "08:00", "do": "18:00", "dni_tyg": [1,2,3,4,5,6]}` (0 = niedziela; wpis zamknięty: `{"dni": "Niedziela", "zamkniete": true}`). Włącza się też status „Teraz otwarte" |
+| Zdjęcia | pliki WebP w `assets/img/realizacje/` (`r01.webp` + miniatura `r01-s.webp`) i wpisy w `dane.json` → `zdjecia` (`plik`, `w`, `h`, `alt`). Pojawi się galeria, lightbox i podgląd na stronie głównej |
+| Usługi, cennik | `_szablony/strony/oferta.html` i `start.html` (pola `todo`) |
+| FAQ, poradniki | `dane.json` → `faq`, `artykuly` |
+| Formularz | `dane.json` → `formularz.endpoint` (np. Formspree lub własny skrypt PHP) |
+| Logo, og:image | `assets/img/` (obecne grafiki są tylko typograficzne i nie są logo firmy) |
+| Zgoda RODO / polityka prywatności | checkbox w `_szablony/strony/kontakt.html`, treść do zatwierdzenia przez klienta |
 
-## Wdrożenie na Hostingerze
+## Publikacja
 
-Wgraj zawartość repozytorium do `public_html` (Menedżer plików / FTP / Git w hPanel).
+Dopóki `strona.url` w `dane.json` to `example.com`, strona ma `noindex`, a `robots.txt` zabrania indeksowania.
+Przed publikacją na Hostingerze wpisz tam prawdziwy adres (https://domena) i przebuduj. Wtedy włączają się
+indeksacja, `canonical`, Open Graph i `sitemap.xml` z właściwą domeną. Zawartość repo (bez `_narzedzia`, `_szablony`, `_zrodla`,
+które blokuje `.htaccess`) wgraj do `public_html`.
 
-## Treści informacyjne
-
-Sekcje „Objawy usterek", „Jak się z nami skontaktować" i FAQ to ogólne treści pomocnicze dla kierowców oraz opis samej strony.
-**Nie opisują oferty firmy** (żadnych usług, cen, czasów ani gwarancji). Treść FAQ jest zduplikowana w JSON-LD (`FAQPage`) –
-zmieniając jedno, zmień drugie. Sekcje można swobodnie usunąć lub rozbudować po uzyskaniu danych od klienta.
-
-## SEO – co jest zrobione
-
-Title, description, canonical, hreflang, robots meta, Open Graph + Twitter Card (z obrazem 1200×630), JSON-LD
-(`WebSite`, `WebPage`, `AutoRepair` z nazwą i współrzędnymi, `FAQPage`), jedno H1 i logiczne H2/H3, semantyczny HTML,
-`robots.txt`, `sitemap.xml`, manifest, nagłówki bezpieczeństwa i cache w `.htaccess`.
-
-## SEO – co zrobić po wdrożeniu
-
-1. `./scripts/set-domain.sh https://twoja-domena.pl`, a potem `./scripts/check.sh`.
-2. Dodać stronę w Google Search Console, zweryfikować domenę i wysłać `sitemap.xml`.
-3. W wizytówce Google (Profil Firmy) wpisać adres strony. Dane NAP (nazwa, adres, telefon) muszą być identyczne na stronie, w wizytówce i w JSON-LD.
-4. Po uzyskaniu adresu i telefonu uzupełnić `address`, `telephone`, `openingHoursSpecification` w JSON-LD oraz dodać nazwę miejscowości do title/H1/description (to najsilniejszy sygnał lokalnego SEO).
-5. Uzupełnić sekcję usług (osobne podstrony usług dopiero, gdy będą potwierdzone treści).
+Po wdrożeniu: dodać stronę w Google Search Console, wysłać `sitemap.xml` i wpisać adres strony w Profilu Firmy.
+Najsilniejszy sygnał lokalnego SEO to zgodne dane NAP (nazwa, adres, telefon) na stronie, w wizytówce i w JSON-LD.

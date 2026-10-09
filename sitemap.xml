@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://TWOJA-DOMENA.pl/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-    <lastmod>2026-10-08</lastmod>
-  </url>
+  <url><loc>https://example.com/</loc></url>
+  <url><loc>https://example.com/oferta/</loc></url>
+  <url><loc>https://example.com/wiedza/</loc></url>
+  <url><loc>https://example.com/realizacje/</loc></url>
+  <url><loc>https://example.com/kontakt/</loc></url>
 </urlset>

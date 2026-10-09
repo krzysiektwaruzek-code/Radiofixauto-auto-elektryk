@@ -1,0 +1,64 @@
+<section class="podhero" aria-labelledby="h1">
+  <div class="wrap">
+    <p class="eyebrow reveal">Kontakt</p>
+    <h1 id="h1" class="reveal">Skontaktuj się z nami</h1>
+    <p class="lead reveal">Napisz wiadomość przez formularz albo sprawdź dojazd na mapie.</p>
+  </div>
+</section>
+
+<section class="sekcja" aria-labelledby="h-dane">
+  <div class="wrap">
+    <h2 id="h-dane" class="vh">Dane kontaktowe</h2>
+    <div class="karty">
+      <article class="karta reveal">
+        <h3>Telefon</h3>
+        {{KARTA_TEL}}
+      </article>
+      <article class="karta reveal">
+        <h3>Adres</h3>
+        {{KARTA_ADRES}}
+      </article>
+      <article class="karta reveal">
+        <h3>Godziny otwarcia</h3>
+        <dl class="godziny">
+          {{GODZINY}}
+        </dl>
+      </article>
+    </div>
+    <p class="karta__male kontakt__email reveal">{{EMAIL_BLOK}}</p>
+  </div>
+</section>
+
+<section class="sekcja sekcja--alt" id="formularz-sekcja" aria-labelledby="h-kon">
+  <div class="wrap kontakt">
+    <div class="kontakt__form reveal">
+      <h2 id="h-kon">Napisz do nas</h2>
+      <p class="karta__male">Opisz krótko, czego dotyczy sprawa: podaj markę, model, rok produkcji i objawy usterki.</p>
+      <form id="formularz" method="post" action="{{FORM_ACTION}}"{{TEL_ATRYBUT}} novalidate>
+        <div class="pole">
+          <label for="f-imie">Imię</label>
+          <input id="f-imie" name="imie" type="text" autocomplete="given-name" required>
+        </div>
+        <div class="pole">
+          <label for="f-kontakt">Telefon lub e-mail do odpowiedzi</label>
+          <input id="f-kontakt" name="kontakt" type="text" autocomplete="email" inputmode="email" required>
+        </div>
+        <div class="pole">
+          <label for="f-wiad">Wiadomość</label>
+          <textarea id="f-wiad" name="wiadomosc" rows="5" placeholder="Marka, model, rok produkcji i opis usterki" required></textarea>
+        </div>
+        <div class="pole pole--zgoda">
+          <input id="f-zgoda" name="zgoda" type="checkbox" required>
+          <label for="f-zgoda">Wyrażam zgodę na kontakt w sprawie mojego zapytania.</label>
+        </div>
+        <button class="btn" type="submit">Wyślij wiadomość</button>
+        <p class="form__msg" id="form-msg" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+    <div class="kontakt__mapa reveal">
+      <iframe title="Mapa: {{NAZWA_PELNA}}" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        src="https://maps.google.com/maps?q={{LAT}},{{LNG}}&amp;z=17&amp;hl=pl&amp;output=embed"></iframe>
+      <a class="link" href="{{MAPY_URL}}" target="_blank" rel="noopener">Otwórz w Mapach Google</a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,148 @@
+{
+  "strona": {
+    "url": "https://example.com",
+    "jezyk": "pl-PL",
+    "title": "Auto elektryk Radiofixauto – kontakt i dojazd",
+    "description": "Radiofixauto – auto elektryk. Zobacz lokalizację na mapie, wyznacz trasę, sprawdź praktyczne informacje dla kierowców i napisz do nas."
+  },
+  "firma": {
+    "nazwa": "Radiofixauto",
+    "nazwa_pelna": "Radiofixauto auto elektryk",
+    "branza": "Auto elektryk",
+    "telefon": "",
+    "email": "",
+    "ulica": "",
+    "kod": "",
+    "miejscowosc": "",
+    "lat": 51.9552285,
+    "lng": 19.2790293,
+    "mapy_cid": "2762722557319760482",
+    "godziny": []
+  },
+  "formularz": {
+    "endpoint": ""
+  },
+  "zdjecia": [],
+  "faq": [
+    {
+      "q": "Gdzie znajduje się Radiofixauto?",
+      "a": "Lokalizację widać na mapie na stronie <a href=\"/kontakt/\">Kontakt</a>. Możesz też od razu <a href=\"{{TRASA}}\" target=\"_blank\" rel=\"noopener\">wyznaczyć trasę w Mapach Google</a>."
+    },
+    {
+      "q": "Jak się z Wami skontaktować?",
+      "a": "Napisz do nas przez <a href=\"/kontakt/#formularz-sekcja\">formularz kontaktowy</a> na stronie Kontakt. Opisz usterkę i zostaw telefon lub e-mail do odpowiedzi."
+    },
+    {
+      "q": "Jakie informacje podać, opisując usterkę?",
+      "a": "Markę, model i rocznik pojazdu, opis objawów, informację kiedy się pojawiają (np. przy rozruchu, w czasie jazdy, po postoju) oraz to, czy świecą się kontrolki na desce rozdzielczej."
+    },
+    {
+      "q": "Czy firma jest w Mapach Google?",
+      "a": "Tak. <a href=\"{{MAPY_URL}}\" target=\"_blank\" rel=\"noopener\">Radiofixauto auto elektryk</a> ma wizytówkę w Mapach Google."
+    }
+  ],
+  "artykuly": [
+    {
+      "id": "rozruch",
+      "ikona": "start",
+      "kategoria": "Rozruch",
+      "tytul": "Auto nie odpala albo słabo kręci rozrusznikiem",
+      "tresc": [
+        "Najczęstszą przyczyną jest rozładowany lub zużyty akumulator, ale winne mogą być też luźne lub skorodowane klemy, przewody masowe albo sam rozrusznik.",
+        "Jeśli rozrusznik tylko cyka albo kręci wyraźnie wolniej niż zwykle, nie próbuj uruchamiać silnika wielokrotnie. Zbyt długie i częste próby dodatkowo obciążają akumulator i rozrusznik.",
+        "Gdy problem się powtarza, warto sprawdzić cały układ rozruchu, a nie tylko wymieniać pojedynczy element."
+      ]
+    },
+    {
+      "id": "akumulator",
+      "ikona": "akumulator",
+      "kategoria": "Akumulator",
+      "tytul": "Rozładowujący się akumulator – skąd się bierze",
+      "tresc": [
+        "Akumulator może się rozładowywać, bo jest zużyty, bo auto jeździ głównie na krótkich trasach albo dlatego, że coś pobiera prąd po wyłączeniu zapłonu, np. uszkodzone lub źle zamontowane urządzenie.",
+        "Przyczyną bywa też usterka układu ładowania. Wtedy akumulator nie jest doładowywany podczas jazdy.",
+        "Pomiar napięcia akumulatora nie zawsze wskazuje przyczynę. Przy powtarzających się problemach potrzebna jest diagnostyka całej instalacji."
+      ]
+    },
+    {
+      "id": "kontrolki",
+      "ikona": "ostrzezenie",
+      "kategoria": "Kontrolki",
+      "tytul": "Kontrolka akumulatora i inne ostrzeżenia na desce",
+      "tresc": [
+        "Kontrolka w kształcie akumulatora, która świeci w czasie jazdy, zwykle oznacza problem z układem ładowania, np. z alternatorem, paskiem lub połączeniami.",
+        "Kontrolek ostrzegawczych nie warto ignorować. Znaczenie poszczególnych symboli opisuje instrukcja obsługi pojazdu.",
+        "Jeśli kontrolka zapala się i gaśnie, zanotuj, kiedy to się dzieje. Taka informacja ułatwia diagnozę."
+      ]
+    },
+    {
+      "id": "bezpieczniki",
+      "ikona": "blyskawica",
+      "kategoria": "Bezpieczniki",
+      "tytul": "Przepalające się bezpieczniki i żarówki",
+      "tresc": [
+        "Bezpiecznik chroni obwód przed przeciążeniem. Jeśli przepala się wielokrotnie, przyczyną jest zwykle zwarcie lub zbyt duży pobór prądu, a nie sam bezpiecznik.",
+        "Nigdy nie zastępuj bezpiecznika takim o większym natężeniu ani nie mostkuj go drutem czy folią. Grozi to przegrzaniem przewodów i pożarem.",
+        "Częste przepalanie żarówek również bywa objawem problemu z instalacją, np. złych styków lub nieprawidłowego napięcia ładowania."
+      ]
+    },
+    {
+      "id": "odbiorniki",
+      "ikona": "wtyczka",
+      "kategoria": "Odbiorniki",
+      "tytul": "Szyby, zamek, nawiew, światła – gdy działają sporadycznie",
+      "tresc": [
+        "Sporadyczne działanie odbiorników często wynika ze słabych styków, korozji we wtykach, uszkodzonej wiązki w miejscach ruchomych (np. w drzwiach lub klapie) albo z przekaźnika.",
+        "Zwróć uwagę, czy usterka pojawia się po deszczu, na nierównej drodze albo po zmianie temperatury. Takie wskazówki skracają szukanie przyczyny."
+      ]
+    },
+    {
+      "id": "spalenizna",
+      "ikona": "ogien",
+      "kategoria": "Bezpieczeństwo",
+      "tytul": "Zapach spalenizny lub dym w aucie",
+      "tresc": [
+        "Zapach przypalonej izolacji albo dym spod deski rozdzielczej lub maski to sytuacja awaryjna.",
+        "Zatrzymaj się w bezpiecznym miejscu, wyłącz zapłon i opuść pojazd. Nie kontynuuj jazdy, dopóki przyczyna nie zostanie sprawdzona.",
+        "Jeśli widzisz ogień lub dym narasta, wezwij służby ratunkowe pod numerem 112."
+      ]
+    }
+  ],
+  "strony": [
+    {
+      "id": "start",
+      "sciezka": "/",
+      "menu": "Strona główna",
+      "title": "Auto elektryk Radiofixauto – kontakt i dojazd",
+      "description": "Radiofixauto – auto elektryk. Zobacz lokalizację na mapie, wyznacz trasę, sprawdź praktyczne informacje dla kierowców i napisz do nas."
+    },
+    {
+      "id": "oferta",
+      "sciezka": "/oferta/",
+      "menu": "Oferta",
+      "title": "Oferta – Radiofixauto auto elektryk",
+      "description": "Oferta Radiofixauto – auto elektryk. Opisz usterkę w formularzu kontaktowym i zapytaj o naprawę swojego pojazdu."
+    },
+    {
+      "id": "wiedza",
+      "sciezka": "/wiedza/",
+      "menu": "Wiedza",
+      "title": "Wiedza – elektryka samochodowa: objawy usterek i FAQ | Radiofixauto",
+      "description": "Praktyczne informacje dla kierowców: rozruch, akumulator, kontrolki, bezpieczniki i inne objawy usterek instalacji elektrycznej w aucie oraz najczęstsze pytania."
+    },
+    {
+      "id": "realizacje",
+      "sciezka": "/realizacje/",
+      "menu": "Realizacje",
+      "title": "Realizacje – zdjęcia z warsztatu | Radiofixauto",
+      "description": "Galeria zdjęć z warsztatu Radiofixauto – auto elektryk."
+    },
+    {
+      "id": "kontakt",
+      "sciezka": "/kontakt/",
+      "menu": "Kontakt",
+      "title": "Kontakt i dojazd – Radiofixauto auto elektryk",
+      "description": "Kontakt z Radiofixauto – auto elektryk. Mapa, wyznaczanie trasy i formularz kontaktowy."
+    }
+  ]
+}

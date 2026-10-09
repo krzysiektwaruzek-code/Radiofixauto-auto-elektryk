@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="{{LANG}}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{TITLE}}</title>
+<meta name="description" content="{{DESCRIPTION}}">
+{{ROBOTS_META}}
+<link rel="canonical" href="{{CANONICAL}}">
+<meta name="theme-color" content="#101216">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pl_PL">
+<meta property="og:site_name" content="{{NAZWA_PELNA}}">
+<meta property="og:title" content="{{TITLE}}">
+<meta property="og:description" content="{{DESCRIPTION}}">
+<meta property="og:url" content="{{CANONICAL}}">
+<meta property="og:image" content="{{OG_IMAGE}}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{{NAZWA_PELNA}}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{TITLE}}">
+<meta name="twitter:description" content="{{DESCRIPTION}}">
+<meta name="twitter:image" content="{{OG_IMAGE}}">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/barlow-condensed-latin-ext-800.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/{{FONTS}}">
+<link rel="stylesheet" href="/{{CSS}}">
+<script type="application/ld+json">
+{{JSONLD}}
+</script>
+</head>
+<body data-strona="{{ID_STRONY}}">
+<a class="skip" href="#tresc">Przejdź do treści</a>
+
+<header class="top" id="top">
+  <div class="wrap top__in">
+    <a class="brand" href="/" aria-label="{{NAZWA_PELNA}} – strona główna">
+      <span class="brand__mark" aria-hidden="true"></span>
+      <span class="brand__name">{{NAZWA}}</span>
+    </a>
+    <nav class="nav" id="menu" aria-label="Główna nawigacja">
+      {{NAV}}
+      {{CTA_MENU}}
+    </nav>
+    {{CTA_NAGLOWEK}}
+    <button class="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Otwórz menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="tresc">
+{{TRESC}}
+</main>
+
+<footer class="stopka">
+  <div class="wrap stopka__siatka">
+    <div>
+      <p class="stopka__logo"><span class="brand__mark" aria-hidden="true"></span>{{NAZWA}}</p>
+      <p class="stopka__opis">{{OPIS_STOPKI}}</p>
+    </div>
+    <div>
+      <h2 class="stopka__h">Strony</h2>
+      <nav class="stopka__nav" aria-label="Nawigacja w stopce">
+      {{NAV}}
+      </nav>
+    </div>
+    <div>
+      <h2 class="stopka__h">Kontakt</h2>
+      <p>{{STOPKA_KONTAKT}}</p>
+    </div>
+    <div>
+      <h2 class="stopka__h">Godziny otwarcia</h2>
+      <dl class="godziny godziny--mini">
+          {{GODZINY}}
+      </dl>
+    </div>
+  </div>
+  <div class="wrap stopka__dol">
+    <p>© <span id="rok">2026</span> {{NAZWA_PELNA}}</p>
+    <a href="{{MAPY_URL}}" target="_blank" rel="noopener">Nas na Mapach Google</a>
+  </div>
+</footer>
+
+<dialog class="lightbox" id="lightbox" aria-label="Podgląd zdjęcia">
+  <button class="lightbox__x" type="button" aria-label="Zamknij podgląd">×</button>
+  <button class="lightbox__n lightbox__n--p" type="button" aria-label="Poprzednie zdjęcie">‹</button>
+  <img alt="">
+  <button class="lightbox__n lightbox__n--n" type="button" aria-label="Następne zdjęcie">›</button>
+</dialog>
+{{GODZINY_JSON}}
+<script src="/{{JS}}" defer></script>
+</body>
+</html>
