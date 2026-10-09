@@ -2,22 +2,41 @@
   "strona": {
     "url": "https://example.com",
     "jezyk": "pl-PL",
-    "title": "Auto elektryk Radiofixauto – kontakt i dojazd",
-    "description": "Radiofixauto – auto elektryk. Zobacz lokalizację na mapie, wyznacz trasę, sprawdź praktyczne informacje dla kierowców i napisz do nas."
+    "title": "Auto elektryk Ozorków – Radiofixauto",
+    "description": "Radiofixauto – auto elektryk w Ozorkowie. Mielczarskiego 16, tel. 600 100 238. Czynne pon.–sob. 8:00–16:00. Mapa, dojazd i formularz kontaktowy."
   },
   "firma": {
     "nazwa": "Radiofixauto",
     "nazwa_pelna": "Radiofixauto auto elektryk",
     "branza": "Auto elektryk",
-    "telefon": "",
+    "telefon": "600 100 238",
     "email": "",
-    "ulica": "",
-    "kod": "",
-    "miejscowosc": "",
+    "ulica": "Mielczarskiego 16",
+    "kod": "95-035",
+    "miejscowosc": "Ozorków",
     "lat": 51.9552285,
     "lng": 19.2790293,
     "mapy_cid": "2762722557319760482",
-    "godziny": []
+    "godziny": [
+      {
+        "dni": "Poniedziałek – sobota",
+        "skrot": "Pon.–sob.",
+        "od": "08:00",
+        "do": "16:00",
+        "dni_tyg": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      {
+        "dni": "Niedziela",
+        "zamkniete": true
+      }
+    ]
   },
   "formularz": {
     "endpoint": ""
@@ -26,11 +45,15 @@
   "faq": [
     {
       "q": "Gdzie znajduje się Radiofixauto?",
-      "a": "Lokalizację widać na mapie na stronie <a href=\"/kontakt/\">Kontakt</a>. Możesz też od razu <a href=\"{{TRASA}}\" target=\"_blank\" rel=\"noopener\">wyznaczyć trasę w Mapach Google</a>."
+      "a": "Mielczarskiego 16, 95-035 Ozorków. Lokalizację widać na mapie na stronie <a href=\"/kontakt/\">Kontakt</a>, a przyciskiem <a href=\"{{TRASA}}\" target=\"_blank\" rel=\"noopener\">Wyznacz trasę</a> otworzysz nawigację w Mapach Google."
+    },
+    {
+      "q": "Jakie są godziny otwarcia?",
+      "a": "Radiofixauto jest czynne od poniedziałku do soboty w godzinach 8:00–16:00. W niedzielę jest zamknięte."
     },
     {
       "q": "Jak się z Wami skontaktować?",
-      "a": "Napisz do nas przez <a href=\"/kontakt/#formularz-sekcja\">formularz kontaktowy</a> na stronie Kontakt. Opisz usterkę i zostaw telefon lub e-mail do odpowiedzi."
+      "a": "Zadzwoń pod numer <a href=\"tel:{{TEL_HREF}}\">{{TELEFON}}</a> albo napisz przez <a href=\"/kontakt/#formularz-sekcja\">formularz kontaktowy</a>. Opisz usterkę i zostaw telefon lub e-mail do odpowiedzi."
     },
     {
       "q": "Jakie informacje podać, opisując usterkę?",
@@ -113,36 +136,36 @@
       "id": "start",
       "sciezka": "/",
       "menu": "Strona główna",
-      "title": "Auto elektryk Radiofixauto – kontakt i dojazd",
-      "description": "Radiofixauto – auto elektryk. Zobacz lokalizację na mapie, wyznacz trasę, sprawdź praktyczne informacje dla kierowców i napisz do nas."
+      "title": "Auto elektryk Ozorków – Radiofixauto",
+      "description": "Radiofixauto – auto elektryk w Ozorkowie. Mielczarskiego 16, tel. 600 100 238. Czynne pon.–sob. 8:00–16:00. Mapa, dojazd i formularz kontaktowy."
     },
     {
       "id": "oferta",
       "sciezka": "/oferta/",
       "menu": "Oferta",
-      "title": "Oferta – Radiofixauto auto elektryk",
-      "description": "Oferta Radiofixauto – auto elektryk. Opisz usterkę w formularzu kontaktowym i zapytaj o naprawę swojego pojazdu."
+      "title": "Oferta – auto elektryk Ozorków | Radiofixauto",
+      "description": "Oferta Radiofixauto – auto elektryk w Ozorkowie. Zapytaj o naprawę swojego pojazdu: 600 100 238."
     },
     {
       "id": "wiedza",
       "sciezka": "/wiedza/",
       "menu": "Wiedza",
-      "title": "Wiedza – elektryka samochodowa: objawy usterek i FAQ | Radiofixauto",
+      "title": "Elektryka samochodowa – objawy usterek i FAQ | Radiofixauto Ozorków",
       "description": "Praktyczne informacje dla kierowców: rozruch, akumulator, kontrolki, bezpieczniki i inne objawy usterek instalacji elektrycznej w aucie oraz najczęstsze pytania."
     },
     {
       "id": "realizacje",
       "sciezka": "/realizacje/",
       "menu": "Realizacje",
-      "title": "Realizacje – zdjęcia z warsztatu | Radiofixauto",
-      "description": "Galeria zdjęć z warsztatu Radiofixauto – auto elektryk."
+      "title": "Realizacje – galeria | Radiofixauto Ozorków",
+      "description": "Galeria zdjęć Radiofixauto – auto elektryk w Ozorkowie."
     },
     {
       "id": "kontakt",
       "sciezka": "/kontakt/",
       "menu": "Kontakt",
-      "title": "Kontakt i dojazd – Radiofixauto auto elektryk",
-      "description": "Kontakt z Radiofixauto – auto elektryk. Mapa, wyznaczanie trasy i formularz kontaktowy."
+      "title": "Kontakt i dojazd – Radiofixauto auto elektryk Ozorków",
+      "description": "Radiofixauto – auto elektryk, Mielczarskiego 16, 95-035 Ozorków. Tel. 600 100 238. Pon.–sob. 8:00–16:00. Mapa i formularz kontaktowy."
     }
   ]
 }

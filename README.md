@@ -25,16 +25,15 @@ assets/css, js, fonts     style, skrypty i lokalne fonty (Barlow Condensed, Inte
 
 ## Zasada: tylko potwierdzone dane
 
-Potwierdzone są wyłącznie: nazwa **Radiofixauto auto elektryk**, współrzędne **51.9552285, 19.2790293**
-i wizytówka w Mapach Google (identyfikator wyliczony z podanego linku). Reszta (telefon, adres, godziny, e-mail,
-usługi, ceny, zdjęcia) nie została wymyślona i jest oznaczona na stronie jako „do uzupełnienia".
-Treści w „Wiedza" to ogólne poradniki dla kierowców, a nie opis oferty firmy.
+Na stronie są wyłącznie dane z wizytówki Google (nazwa, współrzędne) oraz telefon, adres i godziny podane przez
+zleceniodawcę (patrz `_zrodla/ZRODLA.md`). E-mail, usługi, ceny, opinie i zdjęcia nie zostały wymyślone
+i są oznaczone na stronie jako „do uzupełnienia". Treści w „Wiedza" to ogólne poradniki dla kierowców, a nie opis oferty firmy.
 
 ## Co uzupełnić po otrzymaniu danych od klienta
 
 | Dane | Gdzie |
 |---|---|
-| Telefon, e-mail, adres, kod, miejscowość | `dane.json` → `firma`. Znikają znaczniki „do uzupełnienia", przyciski „Wyznacz trasę" zamieniają się w „Zadzwoń", uzupełnia się JSON-LD |
+| E-mail (telefon, adres i godziny są już wpisane) | `dane.json` → `firma`. Znikają znaczniki „do uzupełnienia", przyciski „Wyznacz trasę" zamieniają się w „Zadzwoń", uzupełnia się JSON-LD |
 | Godziny otwarcia | `dane.json` → `firma.godziny`, np. `{"dni": "Poniedziałek – sobota", "od": "08:00", "do": "18:00", "dni_tyg": [1,2,3,4,5,6]}` (0 = niedziela; wpis zamknięty: `{"dni": "Niedziela", "zamkniete": true}`). Włącza się też status „Teraz otwarte" |
 | Zdjęcia | pliki WebP w `assets/img/realizacje/` (`r01.webp` + miniatura `r01-s.webp`) i wpisy w `dane.json` → `zdjecia` (`plik`, `w`, `h`, `alt`). Pojawi się galeria, lightbox i podgląd na stronie głównej |
 | Usługi, cennik | `_szablony/strony/oferta.html` i `start.html` (pola `todo`) |

@@ -112,6 +112,11 @@ def godziny_tekst() -> str:
     return "; ".join(czesci)
 
 
+def godziny_krotko() -> str:
+    """Skrót do paska faktów, np. „Pon.–sob. 08:00–16:00" (tylko dni otwarte)."""
+    return ", ".join(f'{g.get("skrot", g["dni"])} {g["od"]}–{g["do"]}' for g in F.get("godziny", []) if not g.get("zamkniete"))
+
+
 def godziny_html() -> str:
     if not F.get("godziny"):
         return f'<div><dt>Godziny otwarcia</dt><dd>{TODO}</dd></div>'
@@ -163,9 +168,9 @@ def cta_opis() -> str:
 def pasek_html() -> str:
     tel = (f'<a href="tel:{tel_e164(F["telefon"])}"><strong>{e(F["telefon"])}</strong></a>' if F["telefon"]
            else f"<strong>Telefon</strong> {TODO}")
-    godz = (f"<strong>{e(godziny_tekst())}</strong> Godziny otwarcia" if godziny_tekst()
+    godz = (f"<strong>{e(godziny_krotko())}</strong> Godziny otwarcia" if godziny_krotko()
             else f"<strong>Godziny</strong> {TODO}")
-    lok = (f"<strong>{e(adres_tekst())}</strong> Lokalizacja" if adres_tekst()
+    lok = (f'<strong>{e(F["ulica"])}</strong> {e(F["kod"])} {e(F["miejscowosc"])}' if F["ulica"]
            else f'<strong>Dojazd</strong> <a class="link link--w" href="{e(trasa_url())}" target="_blank" rel="noopener">Wyznacz trasę w Mapach Google</a>')
     return "\n    ".join([
         f"<li><strong>{e(F['branza'])}</strong> {e(F['nazwa'])}</li>",
@@ -178,7 +183,7 @@ def pasek_html() -> str:
 def karta_tel() -> str:
     if F["telefon"]:
         return (f'<p class="karta__duze"><a href="tel:{tel_e164(F["telefon"])}">{e(F["telefon"])}</a></p>'
-                '<p class="karta__male">Najszybszy sposób na umówienie wizyty.</p>')
+                '<p class="karta__male">Zadzwoń i opisz usterkę.</p>')
     return f'<p class="karta__duze">{TODO}</p><p class="karta__male">Do tego czasu napisz do nas przez formularz poniżej.</p>'
 
 
@@ -258,7 +263,7 @@ def zdjecie(i: int, klasa: str = "") -> str:
 def galeria_html() -> str:
     if D["zdjecia"]:
         return "\n      ".join(zdjecie(i) for i in range(len(D["zdjecia"])))
-    ramki = ['<div class="foto foto--pusty" role="img" aria-label="Miejsce na zdjęcie z warsztatu"><span class="todo">Zdjęcie do uzupełnienia</span></div>'] * 6
+    ramki = ['<div class="foto foto--pusty" role="img" aria-label="Miejsce na zdjęcie"><span class="todo">Zdjęcie do uzupełnienia</span></div>'] * 6
     return "\n      ".join(ramki)
 
 
@@ -272,7 +277,7 @@ def sekcja_realizacje() -> str:
     <header class="sekcja__glowa sekcja__glowa--rzad reveal">
       <div>
         <p class="eyebrow">Realizacje</p>
-        <h2 id="h-real">Z naszego warsztatu</h2>
+        <h2 id="h-real">Galeria</h2>
       </div>
       <a class="btn btn--ghost" href="/realizacje/">Wszystkie zdjęcia</a>
     </header>
@@ -294,7 +299,8 @@ def nawigacja(aktywna: str) -> str:
 # ---------- dane strukturalne ----------
 
 def bez_tagow(html: str) -> str:
-    return re.sub(r"<[^>]+>", "", html).replace("{{TRASA}}", "").replace("{{MAPY_URL}}", "")
+    html = html.replace("{{TELEFON}}", F["telefon"])
+    return re.sub(r"<[^>]+>", "", html).replace("{{TRASA}}", "").replace("{{MAPY_URL}}", "").replace("{{TEL_HREF}}", "")
 
 
 def jsonld(strona_id: str) -> str:
@@ -344,6 +350,9 @@ def pola(strona: dict | None = None) -> dict[str, str]:
         "NAZWA": e(F["nazwa"]),
         "NAZWA_PELNA": e(F["nazwa_pelna"]),
         "BRANZA": e(F["branza"]),
+        "BRANZA_MIASTO": e(F["branza"] + (" · " + F["miejscowosc"] if F["miejscowosc"] else "")),
+        "TELEFON": e(F["telefon"]),
+        "TEL_HREF": tel_e164(F["telefon"]) if F["telefon"] else "",
         "TITLE": e(p["title"]),
         "DESCRIPTION": e(p["description"]),
         "CANONICAL": kanon,
